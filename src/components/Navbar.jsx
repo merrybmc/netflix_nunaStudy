@@ -1,13 +1,37 @@
 import React from 'react';
 import * as S from './Navbar.styled';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  const onMovePage = (path) => {
+    navigate(path);
+  };
   return (
     <S.Container>
-      <S.Title>Minflix</S.Title>
+      <S.Title
+        onClick={() => {
+          onMovePage('/');
+        }}
+      >
+        Minflix
+      </S.Title>
       <S.MenuBox>
-        <S.Menu>Home</S.Menu>
-        <S.Menu>Link</S.Menu>
+        <S.Menu
+          onClick={() => {
+            onMovePage('/');
+          }}
+        >
+          Home
+        </S.Menu>
+        <S.Menu
+          onClick={() => {
+            onMovePage('/movies');
+          }}
+        >
+          Link
+        </S.Menu>
       </S.MenuBox>
       <S.SearchBox>
         <S.SearchInput />
