@@ -13,13 +13,6 @@ export default function Banner() {
     <h1>page error</h1>;
   }
 
-  useEffect(() => {
-    console.log('zz');
-    if (data) {
-      console.log(data);
-    }
-  }, [data]);
-
   return (
     <S.BannerContainer>
       <S.BannerText>

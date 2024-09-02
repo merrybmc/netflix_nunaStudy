@@ -1,9 +1,18 @@
 import styled from 'styled-components';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
   background-color: black;
   padding: 24px 18px;
+`;
+
+export const MobileMenu = styled(GiHamburgerMenu)`
+  color: white;
+  margin-left: auto;
+
+  cursor: pointer;
 `;
 
 export const Title = styled.h1`
