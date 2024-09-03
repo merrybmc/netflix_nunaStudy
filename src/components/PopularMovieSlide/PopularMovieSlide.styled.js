@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export const CarouselContainer = styled(Carousel)`
-  /* overflow: hidden; */
-
-  background-color: beige;
+  overflow: hidden;
   width: 100vw;
   background-color: transparent;
   height: 440px;
