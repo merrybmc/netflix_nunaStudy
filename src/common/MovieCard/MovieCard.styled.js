@@ -37,6 +37,11 @@ export const Overlay = styled.div`
 `;
 
 export const Title = styled.h2`
+  font-size: 28px;
+  font-weight: 700;
+`;
+
+export const StrongTitle = styled.h2`
   font-size: 36px;
   font-weight: 700;
 `;

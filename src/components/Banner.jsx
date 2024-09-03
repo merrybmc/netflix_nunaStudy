@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { usePopularMoviesQuery } from '../hooks/usePopularMovies';
+import { usePopularMoviesQuery } from '../hooks/useGetMovies';
 import * as S from './Banner.styled';
 
 export default function Banner() {

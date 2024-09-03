@@ -16,9 +16,3 @@ export const Container = styled.div`
 export const Title = styled.h3`
   font-size: 36px;
 `;
-
-export const MovieSliderContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-`;

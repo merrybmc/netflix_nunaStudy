@@ -26,7 +26,7 @@ export const BannerBgImage = styled.div`
 export const BannerText = styled.div`
   position: absolute;
   z-index: 10;
-  width: 36%;
+  width: 50%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
