@@ -17,9 +17,11 @@ export default function MovieSlider({ title, movies }) {
         centerMode={false}
         responsive={responsive}
       >
+        {/* <S.MovieBoxContainer> */}
         {movies?.map((movie, index) => (
           <MovieCard movie={movie} key={index} />
         ))}
+        {/* </S.MovieBoxContainer> */}
       </S.CarouselContainer>
     </S.Container>
   );

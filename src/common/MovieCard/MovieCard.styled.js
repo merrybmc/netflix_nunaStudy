@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MovieBox = styled.div`
   position: relative;
-  /* width: 220px; */
+  width: 220px;
   height: 330px;
   padding: 24px;
   background-size: cover;
@@ -12,7 +12,7 @@ export const MovieBox = styled.div`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.02) translateZ(20px);
+    transform: scale(1.01) translateZ(20px);
     z-index: 2;
   }
 `;
@@ -22,8 +22,8 @@ export const Overlay = styled.div`
   padding: 24px;
   top: 0;
   left: 0;
-  width: 95%;
-  height: 100%;
+  width: 83%;
+  height: 87.5%;
   background: rgba(43, 41, 41, 0.9);
   opacity: 0;
   transition: all 1s;
@@ -48,6 +48,7 @@ export const StrongTitle = styled.h2`
 
 export const GenreBox = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 8px;
   margin-bottom: 8px;

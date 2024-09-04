@@ -4,9 +4,12 @@ import 'react-multi-carousel/lib/styles.css';
 
 export const CarouselContainer = styled(Carousel)`
   overflow: hidden;
-  width: 100vw;
-  background-color: transparent;
   height: 440px;
+`;
+
+export const MovieBoxContainer = styled.div`
+  display: flex;
+  /* gap: 20px; */
 `;
 
 export const Container = styled.div`
