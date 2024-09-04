@@ -6,10 +6,6 @@ import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 export default function MovieCard({ movie }) {
   const { data: genreData } = useMovieGenreQuery();
 
-  useEffect(() => {
-    if (genreData) console.log(genreData);
-  }, [genreData]);
-
   const showGenre = (genreIdlist) => {
     if (!genreData) return [];
 
@@ -18,7 +14,6 @@ export default function MovieCard({ movie }) {
       return genreObj.name;
     });
 
-    console.log(genreNameList);
     return genreNameList;
   };
   return (

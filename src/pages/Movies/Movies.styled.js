@@ -11,6 +11,10 @@ export const FilterContainer = styled.div`
   color: white;
 `;
 
+export const FilterTitle = styled.h2`
+  font-size: 36px;
+`;
+
 export const MovieContainer = styled.div`
   display: flex;
   flex-direction: column;
