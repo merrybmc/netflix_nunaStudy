@@ -5,7 +5,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 export const fetchSearchMovie = ({ keyword, page }) => {
   return keyword
     ? api.get(`/search/movie?query=${keyword}&page=${page}&api_key=${API_KEY}`)
-    : api.get(`/movie/search?page=${page}&api_key=${API_KEY}`);
+    : api.get(`/movie/popular?page=${page}&api_key=${API_KEY}`);
 };
 
 export const useSearchMovieQuery = ({ keyword, page }) => {
