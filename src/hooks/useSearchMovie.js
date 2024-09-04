@@ -2,16 +2,16 @@ import { useQuery } from '@tanstack/react-query';
 import api from '../apis/api';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-export const fetchSearchMovie = ({ keyword }) => {
+export const fetchSearchMovie = ({ keyword, page }) => {
   return keyword
-    ? api.get(`/search/movie?query=${keyword}&api_key=${API_KEY}`)
-    : api.get(`/movie/search?api_key=${API_KEY}`);
+    ? api.get(`/search/movie?query=${keyword}&page=${page}&api_key=${API_KEY}`)
+    : api.get(`/movie/search?page=${page}&api_key=${API_KEY}`);
 };
 
-export const useSearchMovieQuery = ({ keyword }) => {
+export const useSearchMovieQuery = ({ keyword, page }) => {
   return useQuery({
-    queryKey: ['movie-search', keyword],
-    queryFn: () => fetchSearchMovie({ keyword }),
+    queryKey: ['movie-search', keyword, page],
+    queryFn: () => fetchSearchMovie({ keyword, page }),
     select: (result) => result.data,
   });
 };
