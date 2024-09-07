@@ -22,7 +22,7 @@ export const SlideBar = styled.div`
   right: 0;
   padding: 14px;
   background-color: white;
-  z-index: 2;
+  z-index: 10;
 `;
 
 export const CloseButton = styled(IoCloseSharp)`
