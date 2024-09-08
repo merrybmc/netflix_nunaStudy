@@ -88,7 +88,9 @@ export default function MovieDetail() {
       </S.MovieReviewContainer>
       {modalState && <Modal onCloseModal={onCloseModal} />}
       <S.MovieSliderContainer>
-        <MovieSlider title='recommendations' movies={movierecommendations?.results} />
+        <S.DetailMovieSlider>
+          <MovieSlider title='recommendations' movies={movierecommendations?.results} />
+        </S.DetailMovieSlider>
       </S.MovieSliderContainer>
     </S.MovieDetailContainer>
   );

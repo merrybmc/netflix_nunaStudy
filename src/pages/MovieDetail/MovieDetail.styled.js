@@ -116,3 +116,8 @@ export const MovieSliderContainer = styled.div`
   background-color: transparent;
   height: 440px;
 `;
+
+export const DetailMovieSlider = styled.div`
+  width: 70%;
+  margin: auto;
+`;
