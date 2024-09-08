@@ -26,6 +26,10 @@ const fetchMoviesReviews = ({ id }) => {
   return api.get(`/movie/${id}/reviews?api_key=${API_KEY}`);
 };
 
+const fetchMoviesRecommendations = ({ id }) => {
+  return api.get(`/movie/${id}/recommendations?api_key=${API_KEY}`);
+};
+
 export const usePopularMoviesQuery = () => {
   return useQuery({
     queryKey: ['movie-popular'],
@@ -70,6 +74,14 @@ export const useMovieReviewsQuery = ({ id }) => {
   return useQuery({
     queryKey: ['movie-reviews'],
     queryFn: () => fetchMoviesReviews({ id }),
+    select: (result) => result.data,
+  });
+};
+
+export const useMovieRecommendationsQuery = ({ id }) => {
+  return useQuery({
+    queryKey: ['movie-recommendations'],
+    queryFn: () => fetchMoviesRecommendations({ id }),
     select: (result) => result.data,
   });
 };

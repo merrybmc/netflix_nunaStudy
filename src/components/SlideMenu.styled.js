@@ -9,7 +9,7 @@ export const Overlay = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
-  z-index: 1;
+  z-index: 2000;
 `;
 
 export const SlideBar = styled.div`
@@ -22,7 +22,7 @@ export const SlideBar = styled.div`
   right: 0;
   padding: 14px;
   background-color: white;
-  z-index: 10;
+  z-index: 2001;
 `;
 
 export const CloseButton = styled(IoCloseSharp)`

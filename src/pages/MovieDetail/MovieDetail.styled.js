@@ -109,3 +109,10 @@ export const ToggleButton = styled.button`
   cursor: pointer;
   text-decoration: underline;
 `;
+
+export const MovieSliderContainer = styled.div`
+  overflow: hidden;
+  width: 100vw;
+  background-color: transparent;
+  height: 440px;
+`;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ModalContainer = styled.div`
   position: fixed;
   width: 60vw;
-  height: 50vh;
+  height: 40vh;
   background-color: white;
   top: 0;
   bottom: 0;

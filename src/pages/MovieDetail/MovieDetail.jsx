@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from '../../common/Modal/Modal';
 import * as S from './MovieDetail.styled';
 import { useParams } from 'react-router-dom';
-import { useDetailMovieQuery, useMovieReviewsQuery } from '../../hooks/useGetMovies';
+import {
+  useDetailMovieQuery,
+  useMovieRecommendationsQuery,
+  useMovieReviewsQuery,
+} from '../../hooks/useGetMovies';
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
+import MovieSlider from './../../common/MovieSlider/MovieSlider';
+import { responsive } from './../../constants/responsive';
 
 export default function MovieDetail() {
   const { id } = useParams();
@@ -13,6 +19,7 @@ export default function MovieDetail() {
   const { data: genreData } = useMovieGenreQuery();
   const { data: detailMovieData } = useDetailMovieQuery({ id });
   const { data: movieReviewData } = useMovieReviewsQuery({ id });
+  const { data: movierecommendations } = useMovieRecommendationsQuery({ id });
 
   const showGenre = (genreIdlist) => {
     if (!genreData) return [];
@@ -80,6 +87,9 @@ export default function MovieDetail() {
         ))}
       </S.MovieReviewContainer>
       {modalState && <Modal onCloseModal={onCloseModal} />}
+      <S.MovieSliderContainer>
+        <MovieSlider title='recommendations' movies={movierecommendations?.results} />
+      </S.MovieSliderContainer>
     </S.MovieDetailContainer>
   );
 }
